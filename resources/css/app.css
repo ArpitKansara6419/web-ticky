@@ -1,0 +1,210 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+    @apply text-5xl font-extrabold dark:text-white
+}
+
+
+h2 {
+    @apply text-4xl font-bold;
+}
+
+h3 {
+    @apply text-3xl font-semibold;
+}
+
+h4 {
+    @apply text-2xl font-semibold;
+}
+
+h5 {
+    @apply text-xl font-medium;
+}
+
+h6 {
+    @apply text-lg font-medium;
+}
+
+.card {
+    @apply p-4 w-full rounded-lg dark:bg-gray-800 bg-white border
+}
+
+.card-header {
+    @apply max-w-none bg-white rounded-xl p-0 dark:border-gray-600 dark:bg-gray-800 text-gray-800 dark:text-white
+}
+
+.card-body {
+    @apply pt-5 bg-white dark:bg-gray-800
+}
+
+/* app.css */
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap'); */
+
+.f-montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap'); */
+
+.f-anton {
+    font-family: 'Anton', sans-serif;
+}
+
+.lime {
+    color: #f9ef23
+}
+
+/* Calendar grid styling */
+.fc-daygrid-day {
+    border: none !important;
+    padding: 0px !important;
+    /* Reduce padding */
+    transition: 0.3s;
+}
+
+.fc-daygrid * {
+    border: none !important;
+}
+
+/* Dates styling (Small and centered) */
+.fc-daygrid-day-number {
+    font-size: 20px !important;
+    /* Reduce font size */
+    color: #333;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 15px !important;
+    /* Small circular box */
+    height: 15px !important;
+    line-height: 15px !important;
+    text-align: center;
+    border-radius: 12px !important;
+    transition: 0.3s;
+}
+
+/* Highlight the current day */
+.fc-day-today .fc-daygrid-day-number {
+    background-color: #02307b !important;
+    border-radius: 8px !important;
+    padding: 25px 45px !important;
+    color: white;
+}
+
+.fc-day-today {
+    background-color: transparent !important;
+}
+
+/* Hover effect on date boxes */
+.fc-daygrid-day:hover .fc-daygrid-day-number {
+    background-color: #02307ba6 !important;
+    border-radius: 8px !important;
+    padding: 25px 45px !important;
+    color: white;
+}
+
+/* Selected date effect */
+.fc-day-selected .fc-daygrid-day-number {
+    background-color: #02307b !important;
+    color: white !important;
+    border-radius: 50% !important;
+}
+
+/* Ensure the entire date box is small and centered */
+.fc-daygrid-day-frame {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    /* height: 100% !important; */
+    max-height: 0px !important;
+}
+
+.fc-theme-standard td,
+.fc-theme-standard th {
+    border: none;
+}
+
+.fc-toolbar-title {
+    font-size: 1.4rem !important;
+}
+
+.fc-prev-button {
+    background-color: transparent !important;
+    color: #02307b !important;
+    border: none !important;
+}
+
+.fc-next-button {
+    background-color: transparent !important;
+    color: #02307b !important;
+    border: none !important;
+}
+
+/* Remove scrollbar */
+.fc-scrollgrid {
+    overflow: hidden !important;
+}
+
+.fc-scroller {
+    overflow: hidden !important;
+}
+
+/* Prevent unwanted scrolling */
+.fc-daygrid-body {
+    overflow: hidden !important;
+}
+
+/* Ensure the calendar fits within its container */
+.fc-view-harness {
+    max-height: 100% !important;
+}
+
+
+
+/*  Dark Mode */
+.dark .fc-daygrid-day-number {
+    color: white;
+}
+
+.invalid-feedback{
+    color: red;
+}
+
+
+.paging_full_numbers .pagination{
+    @apply inline-flex -space-x-px text-sm
+}
+
+.paging_full_numbers .pagination li button.first{
+    @apply flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white
+}
+
+.paging_full_numbers .pagination li button{
+    @apply flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white
+}
+
+.paging_full_numbers .pagination li button.last{
+    @apply flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white
+}
+
+.pagination-show-entries {
+    @apply flex
+}
+
+.dt-paging-button.page-item.active button{
+    @apply flex items-center justify-center px-3 h-8 text-blue-600 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white
+}
+
+.select2-container{
+    @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 
+}
+
+.select2-selection__rendered{
+    @apply mt-1
+}
+
+.dt-empty{
+    @apply font-bold font-medium p-4;
+}
